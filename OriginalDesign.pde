@@ -1,6 +1,7 @@
 void setup()
 {
-  size(100,100);
+  size(500,500); //canvas
+  background(250,160,24); //canvas color 
 }
 void draw()
 {
