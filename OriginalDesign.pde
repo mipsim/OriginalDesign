@@ -1,7 +1,6 @@
 int ellSize = 0;
 int ellSize2 = -50;
 int ellColorRed = 170;
-int ellColorGreen = 150;
 
 void setup()
 {
@@ -10,8 +9,11 @@ void setup()
 }
 void draw()
 {
-  background(255,255,255); //white canvas color 
+  background(255,255,255); //white canvas color
   pattern(); //circle animation
+  level(); //ground
+  character(); //character
+  
 }
 
 void pattern()
@@ -52,4 +54,16 @@ void ellGrow2()
   	{
   		ellSize2 = 0;
   	}
+}
+
+void level()
+{
+  fill(0);
+  rect(0,630,800,50);
+}
+
+void character()
+{
+	fill(0,255,0);
+	rect(20,580,50,50);
 }
