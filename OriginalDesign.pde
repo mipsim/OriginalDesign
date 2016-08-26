@@ -9,6 +9,9 @@ int ellSize8 = -350;
 int ellSize9 = -400;
 int ellSize10 = -450;
 int ellSizeLim = 700; //once reached. ellSize resets 
+int ellColorRed = (int)(Math.random()*255);
+int ellColorGreen = (int)(Math.random()*255);
+int ellColorBlue = (int)(Math.random()*255);
 int xPos = 250;
 int yPos = 250;
 
@@ -25,30 +28,25 @@ void draw()
 
 void pattern()
 {
+  fill(ellColorRed,ellColorGreen,ellColorBlue);
   ellGrow(); //circle grows to borders
   ellGrow2(); 
+  fill(ellColorRed,ellColorGreen,ellColorBlue);
   ellGrow3(); 
   ellGrow4(); 
+  fill(ellColorRed,ellColorGreen,ellColorBlue);
   ellGrow5(); 
   ellGrow6(); 
+  fill(ellColorRed,ellColorGreen,ellColorBlue);
   ellGrow7(); 
   ellGrow8(); 
+  fill(ellColorRed,ellColorGreen,ellColorBlue);
   ellGrow9(); 
   ellGrow10(); 
 }
 
-
-void ellColor()
-{
-	int ellColorRed = (int)(Math.random())*255; 
-	int ellColorGreen = (int)(Math.random())*255; 
-	int ellColorBlue = (int)(Math.random())*255;
-    fill (ellColorRed,ellColorGreen,ellColorBlue);
-}
-
 void ellGrow()
 {
-  ellColor();
   ellipse(xPos,yPos,ellSize,ellSize);
   ellSize = ellSize + 10;
   if (ellSize > ellSizeLim)
@@ -70,7 +68,6 @@ void ellGrow2()
 
 void ellGrow3()
 {
-  ellColor();
   ellipse(xPos,yPos,ellSize3,ellSize3);
   ellSize3 = ellSize3 + 10;
   if (ellSize3 > ellSizeLim)
@@ -92,7 +89,6 @@ void ellGrow4()
 
 void ellGrow5()
 {
-  ellColor();
   ellipse(xPos,yPos,ellSize5,ellSize5);
   ellSize5 = ellSize5 + 10;
   if (ellSize5 > ellSizeLim)
@@ -114,7 +110,6 @@ void ellGrow6()
 
 void ellGrow7()
 {
-  ellColor();
   ellipse(xPos,yPos,ellSize7,ellSize7);
   ellSize7 = ellSize7 + 10;
   if (ellSize7 > ellSizeLim)
@@ -136,7 +131,6 @@ void ellGrow8()
 
 void ellGrow9()
 {
-  ellColor();
   ellipse(xPos,yPos,ellSize9,ellSize9);
   ellSize9 = ellSize9 + 10;
   if (ellSize9 > ellSizeLim)
